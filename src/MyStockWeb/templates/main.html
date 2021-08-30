@@ -1,0 +1,31 @@
+﻿<html>
+<meta charset=utf-8"utf-8">
+<head>
+<title>分析股票</title>
+</head>
+<body> 
+    <form name="mainForm" action="/mainAction/" method="POST">
+        {% csrf_token %}        		
+		<table>
+			<tr>
+				<td>股票程式碼:</td>
+				<td><input type="text" name="stockCode" id="stockCode"  value="600007"/></td>
+			</tr>
+			<tr>
+				<td>開始時間</td>
+				<td><input type="text" name="startDate" id="startDate" value="2019-01-01" /></td>
+			</tr>
+			<tr>
+				<td>結束時間</td>
+				<td><input type="text" name="endDate" id="endDate" value="2019-05-31" /></td>
+			</tr>
+			<tr>
+				<td colospan="2" align="center">
+	            <input type="submit" name="submit" value="傳送" />&nbsp;&nbsp;
+				<input type="reset" name="reset" value="重設" />
+				</td>
+			</tr>
+		</table>
+	</form>     
+</body>
+</html>
